@@ -104,7 +104,7 @@ export const team: TeamMember[] = [
     name: "Bekzhan B.",
     role: "Country Coordinator",
     country: "Kazakhstan",
-    // Photo coming soon — add /public/team/bekzhan.jpg and set: photo: "/team/bekzhan.jpg"
+    photo: "/team/bekzhan.jpg",
     bio: [
       "Hello! My name is Bekzhan, and I am an undergraduate student at Al-Farabi Kazakh National University in Kazakhstan, specializing in Chinese Studies with a strong interest in international relations, human rights and politics.",
       "I founded and run a Russian-speaking club for international students from the Philippines, China, and Japan, creating opportunities for language practice and cultural exchange. In addition, I participated in the Russian Language and Area Studies Program (RLASP) through American Councils, where I helped American students improve their Russian language skills, introduced them to Kazakh culture, and accompanied them on educational trips across Kazakhstan.",
