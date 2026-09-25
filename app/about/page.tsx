@@ -71,7 +71,7 @@ export default function AboutPage() {
                   {m.photo ? (
                     <Image
                       src={m.photo}
-                      alt={`Portrait of ${m.name}`}
+                      alt={`Portrait of ${m.name}, ${m.role}`}
                       fill
                       sizes="(max-width: 700px) 90vw, 280px"
                     />
@@ -88,7 +88,11 @@ export default function AboutPage() {
                   <p className="member__country">{m.country}</p>
                   <h3 className="member__name">{m.name}</h3>
                   <p className="member__role">{m.role}</p>
-                  <p className="member__bio">{m.bio}</p>
+                  <div className="member__bio">
+                    {m.bio.map((para, j) => (
+                      <p key={j}>{para}</p>
+                    ))}
+                  </div>
                 </div>
               </Reveal>
             ))}

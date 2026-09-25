@@ -77,7 +77,7 @@ export const countries = [
  * Information Form" spreadsheet:
  *   - name:    first name + last initial, e.g. "Kristie M."
  *   - country: the country they represent
- *   - bio:     their short biography
+ *   - bio:     their short biography (one string per paragraph)
  *   - photo:   drop the image in /public/team/ and put its path here,
  *              e.g. "/team/kristie.jpg". Leave it out to show initials.
  */
@@ -85,34 +85,49 @@ export type TeamMember = {
   name: string;
   role: string;
   country: string;
-  bio: string;
+  /** One string per paragraph. */
+  bio: string[];
   photo?: string;
 };
 
 export const team: TeamMember[] = [
   {
-    name: "Program Founder",
-    role: "Founder & Program Director",
-    country: "Central Asia",
-    bio: "Biography coming soon.",
+    name: "Kristie M.",
+    role: "Founder",
+    country: "United States",
+    photo: "/team/kristie.jpg",
+    bio: [
+      "Kristie Moore is a Mexican-Slovak American from Southern California. She is currently an undergraduate student at the University of California, Berkeley studying Global Studies and Slavic Languages & Literatures. Her specific interests revolve around conflict resolution, mass atrocity prevention, and peacebuilding in Central Asia and the South Caucasus. She is an alumna of the National Security Language Initiative for Youth (NSLI-Y) and Critical Language Scholarship (CLS) programs, a student researcher for UC Berkeley’s Human Rights Investigations Lab, and the founder of Central Asia Peace Scholars. Originally from Irvine, California, Kristie has spent time studying and living in Kyrgyzstan, Kazakhstan, and Tajikistan.",
+    ],
   },
   {
-    name: "Kazakhstan Coordinator",
+    name: "Bekzhan B.",
     role: "Country Coordinator",
     country: "Kazakhstan",
-    bio: "Biography coming soon.",
+    // Photo coming soon — add /public/team/bekzhan.jpg and set: photo: "/team/bekzhan.jpg"
+    bio: [
+      "Hello! My name is Bekzhan, and I am an undergraduate student at Al-Farabi Kazakh National University in Kazakhstan, specializing in Chinese Studies with a strong interest in international relations, human rights and politics.",
+      "I founded and run a Russian-speaking club for international students from the Philippines, China, and Japan, creating opportunities for language practice and cultural exchange. In addition, I participated in the Russian Language and Area Studies Program (RLASP) through American Councils, where I helped American students improve their Russian language skills, introduced them to Kazakh culture, and accompanied them on educational trips across Kazakhstan.",
+      "I am currently participating in the Central Asia Media Literacy Program (CAMLP). This is a 3-month media literacy and journalism exchange program for Central Asian students. I attended lectures on disinformation, misinformation, journalism and human rights. At the moment, I am working on my own project related to human rights field.",
+    ],
   },
   {
-    name: "Kyrgyzstan Coordinator",
+    name: "Ainazik A.",
     role: "Country Coordinator",
     country: "Kyrgyzstan",
-    bio: "Biography coming soon.",
+    photo: "/team/ainazik.jpg",
+    bio: [
+      "My name is Ainazik Azamatova, and I am a Linguistics student specializing in English Language at the International University of Central Asia (IUCA). I am an active member and speaker in Enactus and have participated in international educational and youth initiatives. I also have international work experience through a Ferienjob in Germany, where I worked in a multicultural environment. I am interested in international cooperation, intercultural communication, and youth initiatives. In my free time, I enjoy traveling, exploring new places, and hiking.",
+    ],
   },
   {
-    name: "Tajikistan Coordinator",
+    name: "Mirzo A.",
     role: "Country Coordinator",
     country: "Tajikistan",
-    bio: "Biography coming soon.",
+    photo: "/team/mirzo.jpg",
+    bio: [
+      "My name is Mirzo, and I’m originally from Tajikistan. I serve as the Country Coordinator for Tajikistan, where I support the program’s website, CRM systems, and data analysis to help strengthen operations and track our impact across the region. I’m passionate about connecting Central Asian communities and building tools that help programs like this grow and reach more people. I’m excited to contribute to the program’s work during the 2026-2027 term.",
+    ],
   },
 ];
 
